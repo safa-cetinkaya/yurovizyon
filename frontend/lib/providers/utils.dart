@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Utils {
-  static const String devServer = 'https://yurovizyonapp.loca.lt';
-  static const String prodServer = 'https://yurovizyonapp.loca.lt';
+  static const String devServer =
+      'https://friendly-upright-peacock.ngrok-free.app';
+  static const String prodServer =
+      'https://friendly-upright-peacock.ngrok-free.app';
 
   static const Color primaryColor = Color.fromARGB(255, 119, 0, 160);
   static const Color errorColor = Colors.red;
