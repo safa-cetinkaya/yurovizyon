@@ -23,8 +23,8 @@ class BaseFutureBuilder<T> extends StatelessWidget {
             (!snapshot.hasData ||
                 snapshot.data == null ||
                 snapshot.connectionState == ConnectionState.waiting)) {
-          return const Center(
-              child: CircularProgressIndicator(color: Utils.primaryColor));
+          return Center(
+              child: CircularProgressIndicator(color: Utils.textColor));
         }
 
         return childFunction(snapshot);

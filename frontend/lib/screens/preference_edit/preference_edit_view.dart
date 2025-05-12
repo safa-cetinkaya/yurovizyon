@@ -37,30 +37,35 @@ extension PreferenceEditView on _PreferenceEditScreenState {
                   const SizedBox(
                     height: 20.0,
                   ),
-                  Wrap(
-                    children: [
-                      for (Song song in songs)
-                        Padding(
-                          padding: const EdgeInsets.all(4.0),
-                          child: AbsorbPointer(
-                            absorbing: ranking.keys.contains(song.songPk),
-                            child: Opacity(
-                              opacity: ranking.keys.contains(song.songPk)
-                                  ? 0.5
-                                  : 1.0,
-                              child: Draggable(
-                                data: song,
-                                childWhenDragging: Opacity(
-                                  opacity: .75,
+                  Container(
+                    height: 300,
+                    margin: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: GridView.count(
+                      crossAxisCount: 3,
+                      children: [
+                        for (Song song in songs)
+                          Padding(
+                            padding: const EdgeInsets.all(6.0),
+                            child: AbsorbPointer(
+                              absorbing: ranking.keys.contains(song.songPk),
+                              child: Opacity(
+                                opacity: ranking.keys.contains(song.songPk)
+                                    ? 0.5
+                                    : 1.0,
+                                child: Draggable(
+                                  data: song,
+                                  childWhenDragging: Opacity(
+                                    opacity: .75,
+                                    child: SongAPI.getSongImage(song.songPk),
+                                  ),
+                                  feedback: SongAPI.getSongImage(song.songPk),
                                   child: SongAPI.getSongImage(song.songPk),
                                 ),
-                                feedback: SongAPI.getSongImage(song.songPk),
-                                child: SongAPI.getSongImage(song.songPk),
                               ),
                             ),
-                          ),
-                        )
-                    ],
+                          )
+                      ],
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
@@ -143,7 +148,7 @@ extension PreferenceEditView on _PreferenceEditScreenState {
                       )
                     else
                       ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(10.0),
                         child: Container(
                           width: 90,
                           height: 90,

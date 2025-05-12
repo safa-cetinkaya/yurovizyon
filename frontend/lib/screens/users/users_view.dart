@@ -52,7 +52,7 @@ extension UsersView on _UsersScreenState {
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
         padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0),
-        width: double.infinity,
+        width: MediaQuery.of(context).size.width,
         height: 100,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),

@@ -10,7 +10,7 @@ extension SplashView on _SplashScreenState {
             Padding(
               padding: const EdgeInsets.all(24.0),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(10.0),
                 child: SizedBox.fromSize(
                   child: Image.asset('assets/images/yurovizyon_logo.png',
                       fit: BoxFit.cover),
@@ -20,7 +20,7 @@ extension SplashView on _SplashScreenState {
             const Spacer(),
             Opacity(
               opacity: loading ? 1.0 : 0.0,
-              child: const CircularProgressIndicator(),
+              child: CircularProgressIndicator(color: Utils.textColor),
             ),
             const Spacer(),
           ],

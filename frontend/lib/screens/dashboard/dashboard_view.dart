@@ -138,7 +138,7 @@ extension DashboardView on _DashboardScreenState {
 
   ClipRRect emptyRankingBox({required int order, required double size}) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(10.0),
       child: Container(
         alignment: Alignment.bottomRight,
         padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),

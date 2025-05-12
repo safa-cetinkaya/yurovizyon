@@ -109,8 +109,8 @@ class UserAPI {
         },
         loadingBuilder: (context, child, loadingProgress) {
           if (loaded && loadingProgress == null) return child;
-          return const Center(
-              child: CircularProgressIndicator(color: Utils.primaryColor));
+          return Center(
+              child: CircularProgressIndicator(color: Utils.textColor));
         },
         errorBuilder: (context, error, stackTrace) {
           return profileErrorWidget(radius);

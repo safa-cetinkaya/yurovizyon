@@ -34,7 +34,7 @@ class SongAPI {
     bool loaded = false;
 
     return ClipRRect(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(10.0),
       child: SizedBox.fromSize(
         size: Size.fromRadius(size),
         child: Image.network(
@@ -47,8 +47,8 @@ class SongAPI {
           },
           loadingBuilder: (context, child, loadingProgress) {
             if (loaded && loadingProgress == null) return child;
-            return const Center(
-                child: CircularProgressIndicator(color: Utils.primaryColor));
+            return Center(
+                child: CircularProgressIndicator(color: Utils.textColor));
           },
         ),
       ),

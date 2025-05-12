@@ -10,7 +10,7 @@ extension LoginView on _LoginScreenState {
             Padding(
               padding: const EdgeInsets.all(24.0),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(10.0),
                 child: SizedBox.fromSize(
                   child: Image.asset('assets/images/yurovizyon_logo.png',
                       width: 350, fit: BoxFit.cover),
