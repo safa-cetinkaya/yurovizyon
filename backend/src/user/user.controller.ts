@@ -17,8 +17,11 @@ export class UserController {
     ) { }
 
     @Get('information')
-    async getInformation(@Req() req: Request) {
-        return req.body!['session']['user'];
+    async getInformation(@Req() req: Request, @Query() q) {
+        if (q['user_pk'] != null)
+            return await this.userService.findOneByUserPK(q['user_pk']);
+        else
+            return req.body!['session']['user'];
     }
 
     @Get('get_users')
