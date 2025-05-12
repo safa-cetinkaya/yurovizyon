@@ -20,7 +20,7 @@ class BaseAPI {
 
   static void setBaseServer() {
     host = kDebugMode ? Utils.devServer : Utils.prodServer;
-    baseServer = "http://$host/api";
+    baseServer = "$host/api";
   }
 
   static Future<dynamic> fetch(

@@ -19,6 +19,30 @@ class ProfileEditScreen extends StatefulWidget {
 }
 
 class _ProfileEditScreenState extends State<ProfileEditScreen> {
+  final List<String> songNames = [
+    'the_code',
+    'rim_tim',
+    'no_rules',
+    'liar',
+    'zari',
+    'mon_amour',
+    '11_11',
+    'before_party',
+    'ramonda',
+    'teresa',
+    'unforgettable',
+    'veronika',
+    'zorra',
+    'rave',
+    'jako',
+    'firefighter',
+    'on_run',
+    'doomsday',
+    'la_noia',
+    'luktelk',
+    'fighter',
+  ];
+
   late String selectedImage, name, surname, bio;
   bool loading = false;
 

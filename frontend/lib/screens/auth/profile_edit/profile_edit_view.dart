@@ -42,12 +42,7 @@ extension ProfileEditView on _ProfileEditScreenState {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  profileSelectable('the_code'),
-                  profileSelectable('rim_tim'),
-                  profileSelectable('no_rules'),
-                  profileSelectable('liar'),
-                  profileSelectable('zari'),
-                  profileSelectable('mon_amour'),
+                  for (String name in songNames) profileSelectable(name),
                 ],
               ),
             ),

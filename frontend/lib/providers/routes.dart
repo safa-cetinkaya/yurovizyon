@@ -6,6 +6,7 @@ import 'package:frontend/screens/dashboard/dashboard_screen.dart';
 import 'package:frontend/screens/preference_edit/preference_edit_screen.dart';
 import 'package:frontend/screens/settings/settings_screen.dart';
 import 'package:frontend/screens/splash/splash_screen.dart';
+import 'package:frontend/screens/user_ranking/user_ranking_screen.dart';
 import 'package:frontend/screens/users/users_screen.dart';
 
 class Routes {
@@ -26,6 +27,8 @@ class Routes {
     late Widget page;
 
     switch (settings.name) {
+      case UserRankingScreen.route:
+        page = UserRankingScreen(userPk: settings.arguments as String);
       default:
         page =
             Routes.routes[settings.name]!(Routes.navigatorKey.currentContext!);

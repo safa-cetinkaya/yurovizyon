@@ -15,8 +15,13 @@ class UserAPI {
   static const String _editProfileURL = "/user/edit_profile";
   static const String _profileImageURL = "/user/profile_picture";
 
-  static Future<Map<String, dynamic>> info() async {
-    return await BaseAPI.fetch(_infoURL);
+  static Future<Map<String, dynamic>> info({String? userPk}) async {
+    Map<String, String> params = {};
+    if (userPk != null) {
+      params['user_pk'] = userPk;
+    }
+
+    return await BaseAPI.fetch(_infoURL, params: params);
   }
 
   static Future<List<User>> getUsers() async {
